@@ -266,45 +266,61 @@ h3 a:hover {
   width: 680px; /* Or whatever size you want */
 }
 
+/* Enhanced Responsive Styles */
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
   header {
-      flex-direction: column;
-      align-items: center;
+    padding: 10px;
   }
 
-  header .logo {
-      margin-bottom: 15px;
-  }
-
-  header nav ul {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  header nav ul li {
-      margin: 10px 0;
-  }
-
-  .articles {
-      flex-direction: column;
-      gap: 15px;
-  }
-
-  article {
-      flex: 1 1 100%;
+  .hero {
+    padding: 80px 10px;
   }
 
   .hero h1 {
-      font-size: 32px;
+    font-size: 24px;
   }
 
   .hero p {
-      font-size: 16px;
+    font-size: 14px;
   }
 
   section {
-      padding: 20px;
+    margin: 10px;
+    padding: 15px;
   }
+
+  .articles article img {
+    height: auto;
+  }
+
+  .trio-articles {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+
+  .trio-articles article {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+}
+
+/* Fix any elements still forcing horizontal scroll */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
 }
