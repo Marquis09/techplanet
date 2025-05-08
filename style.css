@@ -67,14 +67,14 @@ header nav ul li a:hover {
 }
 
 /* Burger Menu Icon */
-.burger {
+.hamburger-menu {
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
 }
 
-.burger-line {
+.hamburger-menu .bar {
   width: 30px;
   height: 4px;
   background-color: white;
@@ -295,7 +295,7 @@ main {
     display: flex;
   }
 
-  .burger {
+  .hamburger-menu {
     display: flex;
   }
 
