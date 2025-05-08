@@ -24,7 +24,7 @@
 
         <!-- Navigation Menu -->
         <nav id="nav">
-            <ul>
+            <ul id="nav-list">
                 <li><a href="../techplanet/index.html" class="active">Home</a></li>
                 <li><a href="../techplanet/ai.html">AI News</a></li>
                 <li><a href="../techplanet/gadgets.html">Gadgets & Tech</a></li>
@@ -84,12 +84,12 @@
 
     <script>
         // Toggle navigation menu on hamburger click
-        const burgerMenu = document.getElementById('burger-menu');
-    const navList = document.getElementById('nav-list');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navList = document.getElementById('nav-list');
 
-    burgerMenu.addEventListener('click', () => {
-      navList.classList.toggle('active');
-    });
+        hamburgerMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
