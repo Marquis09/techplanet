@@ -5,55 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechPlanet | Home</title>
     <link rel="stylesheet" href="../techplanet/style.css">
-    <style>
-        /* Basic styles for mobile responsiveness */
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: black;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                text-align: center;
-            }
-
-            nav.active ul {
-                display: block;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            nav ul li {
-                padding: 10px 0;
-            }
-
-            nav ul li a {
-                text-decoration: none;
-                color: black;
-                font-size: 18px;
-                display: block;
-            }
-
-            .logo span {
-                display: inline;
-                font-size: 24px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -63,6 +14,12 @@
                 <span>TechPlanet</span>
             </a>
         </div>
+          
+         <!-- Hamburger Menu Icon -->
+       <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
 
         <div class="menu-toggle" onclick="toggleMenu()">
             <span></span>
@@ -234,10 +191,13 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
-        }
+          // Toggle navigation menu on hamburger click
+          const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navList = document.getElementById('nav-list');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
